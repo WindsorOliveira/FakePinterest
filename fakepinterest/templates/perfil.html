@@ -1,0 +1,18 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+Perfil - Fakepinterest {{usuario}}
+{% endblock %}
+
+{% block body %}
+<body>
+
+<h1>Bem vindo: {{usuario}}</h1>
+
+<a href="{{url_for('homepage')}}">Sair</a>
+
+</body>
+{% endblock %}
+
+
+

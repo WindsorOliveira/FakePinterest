@@ -14,6 +14,20 @@
 
 <p>Codificando em Python - Flask</p>
 
+{% block formulario %}
+<form method="POST">
+    {{ form.csrf_token }}
+
+        {{ form.email.label() }}
+        {{ form.email() }}
+
+        {{ form.senha.label() }}
+        {{ form.senha() }}
+
+        {{ form.botao_confir() }}
+
+</form>
+{% endblock %}
 
 </body>
 {% endblock %}

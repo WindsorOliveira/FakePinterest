@@ -16,7 +16,7 @@ class Usuario(database.Model, UserMixin):
 
 
 
-class Foto():
+class Foto(database.Model):
     id = database.Column(database.Integer, primary_key=True)
     imagem = database.Column(database.String, default="default.png")
     data_criacao = database.Column(database.DateTime, nullable=False, default=datetime.utcnow())

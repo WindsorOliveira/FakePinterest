@@ -12,9 +12,9 @@ class FormLogin(FlaskForm):
 
 class FormCriarConta(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email()])
-    username = StringField ("Nome", validators=[DataRequired()])
-    senha = PasswordField ("Senha", validators=[DataRequired(), Length(min=8,max=15,message="Senha deve conter 8 caracteres")])
-    confir_senha = PasswordField("Confirmar senha", validators=[DataRequired(), EqualTo("Senha", message="Senha deve ser igual")])
+    username = StringField("Nome", validators=[DataRequired()])
+    senha = PasswordField("Senha", validators=[DataRequired(), Length(8, 15)])
+    confir_senha = PasswordField("Confirmar senha", validators=[DataRequired(), EqualTo("Senha")])
     botao_confir = SubmitField("Cadastrar")
 
     def validate_email(self, email):
